@@ -22,5 +22,8 @@ class Item:
     def display(self):
         print(self.content)
 
+    def get_content(self):
+        return self.content
+
 
 
