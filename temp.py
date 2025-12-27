@@ -19,4 +19,8 @@ class Item:
     def __init__(self, content: str):
         self.content = content
 
+    def display(self):
+        print(self.content)
+
+
 
