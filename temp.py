@@ -8,3 +8,12 @@ Build New project help you classify text in document as types we created
     // emoji happy
 
 """
+
+"""
+Build Item interface for all future types
+"""
+class Item:
+    content: any
+    type_id: int
+
+
