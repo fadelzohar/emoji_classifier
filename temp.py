@@ -25,5 +25,7 @@ class Item:
     def get_content(self):
         return self.content
 
-
+    def set_type_id(self, type_id: int):
+        self.type_id = type_id
+        return self
 
