@@ -39,3 +39,8 @@ class ItemEmoji(Item):
 
     def __init__(self, content: str):
         super().__init__(content)
+
+
+class Handler:
+    next = None
+
