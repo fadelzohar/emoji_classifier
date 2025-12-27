@@ -29,3 +29,8 @@ class Item:
         self.type_id = type_id
         return self
 
+
+class ItemText(Item):
+
+    def __init__(self, content: str):
+        super().__init__(content)
