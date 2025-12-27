@@ -50,3 +50,7 @@ class Handler:
     def set_next(self, next):
         self.next = next
         return self
+
+
+class TextMediator:
+    item: Item = None
