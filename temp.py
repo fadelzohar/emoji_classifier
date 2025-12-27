@@ -54,3 +54,6 @@ class Handler:
 
 class TextMediator:
     item: Item = None
+
+    def set_mediator_type(self, item: Item):
+        self.item = item
