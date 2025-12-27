@@ -44,3 +44,6 @@ class ItemEmoji(Item):
 class Handler:
     next = None
 
+    def handle(self, text: str):
+        pass
+
