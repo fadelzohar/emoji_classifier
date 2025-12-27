@@ -47,3 +47,6 @@ class Handler:
     def handle(self, text: str):
         pass
 
+    def set_next(self, next):
+        self.next = next
+        return self
