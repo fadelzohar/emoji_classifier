@@ -102,3 +102,9 @@ class Document(Item):
             if self.search_for_type_id(index) == False:
                 return index
         return index
+
+    def search_for_item(self, item: Item):
+        if item in self.items:
+            return item
+        else:
+            return None
