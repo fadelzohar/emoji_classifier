@@ -90,3 +90,8 @@ class Document(Item):
 
     def remove_item(self, item: Item):
         self.items.remove(item)
+    def search_for_type_id(self, index: int):
+        for item in self.items:
+            if item.type_id == index:
+                return True
+        return False
