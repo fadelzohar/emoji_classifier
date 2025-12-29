@@ -57,3 +57,16 @@ class TextMediator:
 
     def set_mediator_type(self, item: Item):
         self.item = item
+
+class EmojiHandler(Handler):
+    mediator: TextMediator = None
+
+    def __init__(self, mediator: TextMediator):
+        self.mediator = mediator
+
+    def handle(self, text: str):
+        if text == "emoji":
+            self.mediator.set_mediator_type(ItemEmoji(text))
+        elif self.next != None:
+            self.next.handle(text)
+
