@@ -70,3 +70,23 @@ class EmojiHandler(Handler):
         elif self.next != None:
             self.next.handle(text)
 
+class TextHandler(Handler):
+    mediator: TextMediator = None
+
+    def __init__(self, mediator: TextMediator):
+        self.mediator = mediator
+
+    def handle(self, text: str):
+        if text != "emoji":
+            self.mediator.set_mediator_type(ItemText(text))
+        elif self.next != None:
+            self.next.handle(text)
+            self.mediator.set_mediator_type(None)
+class Document(Item):
+    items: list[Item] = []
+
+    def add_item(self, item: Item):
+        self.items.append(item.set_type_id(self.search_for_right_type_id))
+
+    def remove_item(self, item: Item):
+        self.items.remove(item)
