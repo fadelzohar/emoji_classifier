@@ -9,3 +9,5 @@ class TestTempItem(unittest.TestCase):
     def test_get_content(self):
         self.assertEqual(self.item.get_content(), "fadel")
 
+    def test_set_type_id(self):
+        self.assertIsInstance(self.item.set_type_id(2), Item)
