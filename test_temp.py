@@ -6,4 +6,6 @@ class TestTempItem(unittest.TestCase):
     def setUp(self):
         self.item = Item("fadel")
 
+    def test_get_content(self):
+        self.assertEqual(self.item.get_content(), "fadel")
 
