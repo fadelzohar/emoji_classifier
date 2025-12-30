@@ -118,3 +118,6 @@ class DocumentClient:
     def __init__(self, text: str):
         self.text = text
         self.prepare_text_to_list()
+
+    def prepare_text_to_list(self):
+        self.text_list = self.text.split()
