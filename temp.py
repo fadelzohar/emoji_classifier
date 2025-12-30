@@ -121,3 +121,11 @@ class DocumentClient:
 
     def prepare_text_to_list(self):
         self.text_list = self.text.split()
+
+    def prepare_text_to_list_typed(self):
+        for item in self.text_list:
+            mediator = TextMediator()
+            emoji_handler = EmojiHandler(mediator)
+            text_handler = TextHandler(mediator)
+            text_handler.handle(item)
+            self.text_list_typed.append(mediator.item)
