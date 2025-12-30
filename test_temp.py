@@ -34,4 +34,8 @@ class TestItemEmojiSmile(unittest.TestCase):
     def test_init(self):
         self.assertIsInstance(self.item, Item)
 
-class TestEmojiItemHandler(self):
+class TestEmojiItemHandler(unittest.TestCase):
+
+    def setUp(self):
+        self.mediator = TextMediator()
+        self.handler = EmojiSmileHandler(mediator=self.mediator)
