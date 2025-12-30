@@ -11,3 +11,12 @@ class TestTempItem(unittest.TestCase):
 
     def test_set_type_id(self):
         self.assertIsInstance(self.item.set_type_id(2), Item)
+
+
+class TestTextMediator(unittest.TestCase):
+
+    mediator: TextMediator = None
+
+    def setUp(self):
+        self.mediator = TextMediator()
+
