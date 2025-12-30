@@ -20,3 +20,18 @@ class TestTextMediator(unittest.TestCase):
     def setUp(self):
         self.mediator = TextMediator()
 
+    def test_set_mediator_type(self):
+        self.mediator.set_mediator_type(Item("fadel"))
+        self.assertIsInstance(self.mediator.item, Item)
+
+
+class TestItemEmojiSmile(unittest.TestCase):
+
+    item: Item = None
+
+    def setUp(self):
+        self.item = ItemEmojiSmile("fadel")
+    def test_init(self):
+        self.assertIsInstance(self.item, Item)
+
+class TestEmojiItemHandler(self):
