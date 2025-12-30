@@ -108,3 +108,13 @@ class Document(Item):
             return item
         else:
             return None
+
+
+class DocumentClient:
+    text: str = None
+    text_list: list[str] = []
+    text_list_typed: list[Item] = []
+
+    def __init__(self, text: str):
+        self.text = text
+        self.prepare_text_to_list()
